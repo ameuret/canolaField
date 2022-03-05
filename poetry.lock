@@ -1,4 +1,12 @@
 [[package]]
+name = "nuitka"
+version = "0.7.3"
+description = "Python compiler with full language support and CPython compatibility"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pytweening"
 version = "1.0.4"
 description = "A collection of tweening / easing functions."
@@ -17,9 +25,12 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "6d57557320eed6a63f0cf2ffcdd14e181becd651f3ddd006dd1d20cb06f98216"
+content-hash = "9a6a6c7e852104aca7fb9b8b36419b380314d1caeb4a4e1ff9a7a13c0c2e768b"
 
 [metadata.files]
+nuitka = [
+    {file = "Nuitka-0.7.3.tar.gz", hash = "sha256:84d84fb68960a218172b549b370453791f930f510de674ca12ec96e79d223205"},
+]
 pytweening = [
     {file = "pytweening-1.0.4.tar.gz", hash = "sha256:8533282cf70b31de8a0499e1cf420930b0013c787118872b2ec899382792e2e6"},
 ]

@@ -6,6 +6,22 @@
 # and related or neighboring rights to Canola Field.
 # This work is published from: Japan.
 
+# nuitka-project: --windows-product-name="Canola Field"
+# nuitka-project: --windows-company-name="Arnaud MEURET"
+# nuitka-project: --windows-file-description="Canola Field - A video toy by Arthus MEURET"
+# nuitka-project: --windows-product-version=0.2.0.0
+# nuitka-project: --windows-icon-from-ico=icon64.png
+# nuitka-project: --windows-disable-console
+
+# NOTnuitka-project: --linux-onefile-icon=icon64.png
+
+# nuitka-project: --include-data-file=canola320.png=
+# nuitka-project: --include-data-file=CanolaField.png=
+# nuitka-project: --include-data-file=clouds320x180-01.png=
+# nuitka-project: --include-data-file=PD320x180.png=
+# nuitka-project: --include-data-file=help.png=
+# nuitka-project: --include-data-file=fist.png=
+# nuitka-project: --onefile
 
 from random import randint
 from time import perf_counter
@@ -17,6 +33,7 @@ from tweening import TimedValue
 class App:
 
     def __init__(self):
+        self.version = 0.2
         self.w = 320
         self.h = 180
 
@@ -64,6 +81,9 @@ class App:
         self.fistI = pyxel.Image(320, 180)
         self.fistI.load(0, 0, "fist.png")
 
+        self.vzI = pyxel.Image(320, 180)
+        self.vzI.load(0, 0, "vz.png")
+
         self.grainCountCeil = 300
         self.maxGrains = TimedValue(self.grainCountCeil, 60*20, 'easeInExpo')
         self.inBeach = 0
@@ -107,7 +127,7 @@ class App:
         self.drawGrains()
 
         if self.maskOn:
-            pyxel.blt(0, 0, self.fistI, 0, 0, self.w, self.h, 14)
+            pyxel.blt(0, 0, self.vzI, 0, 0, self.w, self.h, 14)
         if self.paused:
             self.drawPause()
         # pyxel.text(10, 30, "IN AIR: " + str(self.inAir), 5)
@@ -117,7 +137,7 @@ class App:
             pyxel.text(self.centX(str(self.grainCountCeil)), 100, str(self.grainCountCeil), 15)
 
         self.drawHelp()
-        self.drawPalette()
+        # self.drawPalette()
         pyxel.pset(pyxel.mouse_x, pyxel.mouse_y, 15)
 
     def drawPause(self):
@@ -147,7 +167,7 @@ class App:
         pyxel.blt(self.titleX.value(), 0, self.titleI, 0, 0, self.w, self.h, 0)
         pyxel.blt(0, self.pdY.value(), self.pdI, 0, 0, self.w, self.h, 6)
         if self.titleIntro.elapsed():
-            pyxel.text(304, 180-6, "v0.1", 1)
+            pyxel.text(304, 180-6, f"v{self.version}", 1)
             if pyxel.frame_count % 60 < 30:
                 t = "PRESS SPACE"
                 pyxel.text(self.centX(t), 100, t, 1)

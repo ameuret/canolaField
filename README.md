@@ -6,11 +6,16 @@ Just relax.
 
 ## Roadmap
 
+  * [ ] Follow mouse
+  * [ ] Adjust speed
+  * [ ] Sand mode
   * [ ] Left/Right Fall Bounds
   * [ ] External Masks
   * [ ] External Palette
   * [ ] External Image
   * [ ] Continue/Reset
+  * [ ] Reverse
+  * [ ] Endless Pan
   
 
 ## Install
