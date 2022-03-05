@@ -21,7 +21,7 @@ class App:
         self.h = 180
 
         pyxel.init(self.w, self.h,
-                   title="SandStress",
+                   title="Canola Field - Just Relax",
                    fps=60,
                    quit_key=pyxel.KEY_Q)
 
