@@ -1,0 +1,28 @@
+[[package]]
+name = "pytweening"
+version = "1.0.4"
+description = "A collection of tweening / easing functions."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pyxel"
+version = "1.6.9"
+description = "A retro game engine for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "6d57557320eed6a63f0cf2ffcdd14e181becd651f3ddd006dd1d20cb06f98216"
+
+[metadata.files]
+pytweening = [
+    {file = "pytweening-1.0.4.tar.gz", hash = "sha256:8533282cf70b31de8a0499e1cf420930b0013c787118872b2ec899382792e2e6"},
+]
+pyxel = [
+    {file = "pyxel-1.6.9-py3-none-any.whl", hash = "sha256:d3ffc27845c9a442f97e6f725ab844e7de24c07df7cb3bef54a0b72eaaef6896"},
+]
